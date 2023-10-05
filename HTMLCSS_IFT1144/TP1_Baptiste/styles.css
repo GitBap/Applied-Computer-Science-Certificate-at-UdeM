@@ -1,0 +1,65 @@
+
+
+/* texte italique et gras */
+.italiqueg{
+
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* ligne horizontale */
+hr.pointille{
+
+border-top: 2px dotted rebeccapurple;
+}
+
+
+/* créer de l'espace */
+.espacement{
+
+    clear:both;
+}
+
+/* positionner les images */
+.flotterDroite{
+
+    float: right;
+}
+
+/* espaces autours des images */
+img{
+    padding: 20px;
+    margin: 20px ;
+}
+
+/* justifier les textes */
+.justifier{
+
+    text-align: justify;
+}
+
+/* centrer les titres */
+.centrer{
+
+    text-align: center;
+}
+
+
+/* bordure texte */
+.bordure{
+
+    border: 2px solid blue ;
+    padding: 1px;
+}
+
+
+/* display block et span */
+.disspan{
+    display: block;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    background-color: greenyellow;
+
+}

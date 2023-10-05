@@ -1,0 +1,71 @@
+/* divison conteneur */
+.conteneur {
+    width: 920px; 
+    background-color:oldlace;
+    margin-right: auto; 
+    margin-left: auto; 
+    
+
+}
+
+/* Image arrière plan header */
+.bheader {
+    background-image: url('../images/nuages_708.jpg');
+    height: 100px;
+    
+  }
+
+/* Couleur arrière plan nav */
+.nav {
+  background-color:palegreen;
+  
+  
+  
+}
+
+.footer {
+  background-color:skyblue
+}
+
+.table   {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 90%;
+  text-align: center;
+  
+  
+  
+}
+
+
+/* Liens sections main*/
+  a:link {
+      color: red; text-decoration :none; 
+    }
+
+  a:visited {
+      color: blue;
+    }
+
+  a:hover {
+      color: green; font-style : italic;
+    }
+
+  a:active {
+      color:red; background-color: white;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

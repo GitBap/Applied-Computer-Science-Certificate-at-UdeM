@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Olivier Baptiste -->
+<!DOCTYPE automobiles SYSTEM "auto.dtd">
+<automobiles>
+    <Fabricant type="ford">
+        <modele typesmodeles="focus">
+            <options>
+                <code>27A</code>
+                <optionprix>800$</optionprix>
+                <description>Vitres électriques et siège électriques, 8 positions</description>
+            </options>
+            <options>
+                <code>27F</code>
+                <prix>1200$</prix>
+                <description>Roue magnésium et toit ouvrant</description>
+            </options>
+            <options>
+                <code>26B</code>
+                <prix>400$</prix>
+                <description>groype éclairage de luxe</description>
+            </options>
+            <sous-modele modeles="LS">
+                <nbr-portes>4 portes</nbr-portes>
+                <couleur>blanc</couleur>
+                <couleur>noir</couleur>
+                <couleur>rouge</couleur>
+                <couleur>bleu</couleur>
+                <prix>19 995$</prix>
+                <autres-options>27A</autres-options>
+                <autres-options>27F</autres-options>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.8 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="ordinaire"/>
+                    <prix-sup>pas de frais</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>6 cylindres</nbrcylindres>
+                    <deplacement>1.8 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>1300$</prix-sup>
+                </groupe-moteur>
+            </sous-modele>
+            <sous-modele modeles="EX">
+                <nbr-portes>5 portes</nbr-portes>
+                <couleur>blanc</couleur>
+                <couleur>noir</couleur>
+                <couleur>rouge</couleur>
+                <couleur>bleu</couleur>
+                <prix>21 995$</prix>
+                <autres-options>27A</autres-options>
+                <autres-options>27F</autres-options>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>2.8 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="ordinaires"/>
+                    <prix-sup>1300$</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>6 cylindres</nbrcylindres>
+                    <deplacement>2.8 litres</deplacement>
+                    <puissance>145 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>2400$</prix-sup>
+                </groupe-moteur>
+            </sous-modele>
+            <sous-modele modeles="GS">
+                <nbr-portes>5 portes</nbr-portes>
+                <couleur>noir</couleur>
+                <couleur>rouge</couleur>
+                <prix>28 995$</prix>
+                <autres-options>aucune option disponible</autres-options>
+                <autres-options>27F</autres-options>
+                <groupe-moteur>
+                    <nbrcylindres>6 cylindres</nbrcylindres>
+                    <deplacement>2.8 litres</deplacement>
+                    <puissance>145 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>pas de frais</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>6 cylindres</nbrcylindres>
+                    <deplacement>3.7 litres</deplacement>
+                    <puissance>145 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>2400$</prix-sup>
+                </groupe-moteur>
+            </sous-modele>
+    </Fabricant>
+    
+    <Fabricant type="vw">
+        <modele typesmodeles="jetta">
+            <options>
+                <code>27A</code>
+                <optionprix>1800$</optionprix>
+                <description>air climatisé et sièges chauffants</description>
+            </options>
+            <options>
+                <code>27F</code>
+                <prix>1200$</prix>
+                <description>Roue magnésium et toit ouvrant</description>
+            </options>
+            <options>
+                <code>26B</code>
+                <prix>400$</prix>
+                <description>groype éclairage de luxe</description>
+            </options>
+            <sous-modele modeles="GS">
+                <nbr-portes>4 portes</nbr-portes>
+                <couleur>blanc</couleur>
+                <couleur>noir</couleur>
+                <couleur>rouge</couleur>
+                <couleur>bleu</couleur>
+                <prix>21 995$</prix>
+                <autres-options>27A</autres-options>
+                <autres-options>27F</autres-options>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.8 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="ordinaire"/>
+                    <prix-sup>pas de frais</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.7 litres</deplacement>
+                    <puissance>170 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>sans frais</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.9 litres</deplacement>
+                    <puissance>110 chevaux</puissance>
+                    <essence type="diesel"/>
+                    <prix-sup>1800</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>6 cylindres</nbrcylindres>
+                    <deplacement>2.8 litres</deplacement>
+                    <puissance>245 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>4300</prix-sup>
+                </groupe-moteur>
+            </sous-modele>
+            <sous-modele modeles="GX">
+                <nbr-portes>4 portes</nbr-portes>
+                <couleur>blanc</couleur>
+                <couleur>noir</couleur>
+                <couleur>rouge</couleur>
+                <couleur>bleu</couleur>
+                <prix>21 995$</prix>
+                <autres-options>27A</autres-options>
+                <autres-options>27F</autres-options>
+                <autres-options>26B</autres-options>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.8 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="ordinaires"/>
+                    <prix-sup>sans frais</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.7 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>2350$</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.9 litres</deplacement>
+                    <puissance>110 chevaux</puissance>
+                    <essence type="diesel"/>
+                    <prix-sup>1800$</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>6 cylindres</nbrcylindres>
+                    <deplacement>2.8 litres</deplacement>
+                    <puissance>245 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>4300$</prix-sup>
+                </groupe-moteur>
+            </sous-modele>
+            <sous-modele modeles="GX familiale">
+                <nbr-portes>5 portes</nbr-portes>
+                <couleur>noir</couleur>
+                <couleur>rouge</couleur>
+                <prix>28 995$</prix>
+                <autres-options>aucune option disponible</autres-options>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.8 litres</deplacement>
+                    <puissance>105 chevaux</puissance>
+                    <essence type="ordinaire"/>
+                    <prix-sup>sans frais</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.7 litres</deplacement>
+                    <puissance>170 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>2350$</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>1.9 litres</deplacement>
+                    <puissance>110 chevaux</puissance>
+                    <essence type="diesel"/>
+                    <prix-sup>1800$</prix-sup>
+                </groupe-moteur>
+                <groupe-moteur>
+                    <nbrcylindres>4 cylindres</nbrcylindres>
+                    <deplacement>2.8 litres</deplacement>
+                    <puissance>245 chevaux</puissance>
+                    <essence type="super"/>
+                    <prix-sup>4300$</prix-sup>
+                </groupe-moteur>
+            </sous-modele>
+    </Fabricant>
+</automobiles>
+
+

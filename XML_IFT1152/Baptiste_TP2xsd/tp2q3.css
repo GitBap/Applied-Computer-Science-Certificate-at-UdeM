@@ -1,0 +1,39 @@
+/* bordure référence */
+référence {
+    width: 1000px;
+    border: 2px solid gray;
+    padding: 1px;
+    margin-left: 20px;
+    height: 190px;
+    padding-left: 5px;
+}
+/* retards */
+ retards {
+    color: red;
+}
+
+/* livres */
+ livres {
+    width: 1000px;
+  padding: 2px; 
+  border: 3px solid blue;
+  margin: 0;
+  color: blue;
+}
+
+  adresse, code postal, province, cellulaire, livre-retard, référence, fax, livres, livre {
+     display: block;
+ }
+ 
+  téléphone, rue, cellulaire, maison, date-naissance, fax, livre-retard {
+      display: list-item;
+      list-style-type:circle;
+      }
+      
+   bibliothèque {
+       margin-left: 30px;
+   }
+     
+   cellulaire, maison, fax {
+       margin-left: 40px
+   }

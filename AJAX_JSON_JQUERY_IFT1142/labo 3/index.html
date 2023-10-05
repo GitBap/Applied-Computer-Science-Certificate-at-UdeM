@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="src/client/requetes.js"></script>
+    <script src="src/client/gestionFilms.js"></script>
+</head>
+<body onLoad="chargerFilms()">
+   <!-- Barre de navigation -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div  id="navbarNav">
+          <form >
+              <select name = "trier" id = "trier" onChange="changer();">
+                <option value=" ">Trier par</option>
+                <option value="Titre">Titre</option>
+                <option value="Annee">Lister par année</option>
+                <option value="Duree en min">Duree en min</option>
+              </select>
+              <input type="text" name="val" id="val">
+              <button type="button" class="btn btn-primary" onClick="search();">Recherche</button>
+              <input type="button" value="Categories" class="btn btn-primary">
+          </form>
+        
+      </div>
+      <button style="float:right;margin-right: 12px;" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <span style="font-size:18px; color:white;">+</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Fin de barre de navigation -->
+  <div class="container" id="contenu">
+    
+  </div>
+      <!-- Modal form enreg film-->
+      
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enregistrer un film</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Le formulaire-->
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="num" class="form-label">Numéro</label>
+            <input type="text" class="form-control" id="num"  required>
+          </div>
+          <div class="col-md-4">
+            <label for="num" class="form-label">Titre</label>
+            <input type="text" class="form-control" id="titre"  required>
+          </div>
+          <div class="col-md-4">
+            <label for="num" class="form-label">Durée</label>
+            <input type="text" class="form-control" id="duree"  required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onClick="ajouterFilm();">Ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

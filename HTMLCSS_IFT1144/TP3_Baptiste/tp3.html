@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html lang="fr">
+    <head>
+        <title> TP3 </title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+	<style> 
+		#menu {
+			width: 20%;
+			font-size: 2em;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		#affichage {
+			width: 75%;
+			display: inline-block;
+			font-size: 1.5em;
+		}
+		
+		#affichage .categorie {
+			width: 24%;
+			display: inline-block;
+			margin-top: 0px;
+			padding: 0px;
+		}
+				
+	    #menu ul ul {
+			display: none;
+			margin-left: 20px;
+		}
+		
+		#menu ul {
+			display: block;
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: #e5eecc;			
+		}
+
+		.choisir {
+			background-color: #d5ccee;
+		}
+	</style>
+
+    </head>
+    <body> 
+        <h1>Travail Pratique #3</h1>
+        <h2>Identification</h2>
+        <p> Ce travail a été fait par Olivier Baptiste <br> Matricule: 20220535 </p>
+        <h2>Formulaire de conversion</h2>
+        <p>
+            Valeur: <input type="text" name="valeur" id="nombre" onchange=""> 
+            <span id="resultat">Résultat ici</span>         
+            <br>
+            <input type="submit" value="Pouces vers cm" 
+                onclick="var elem=document.getElementById('nombre'); elem. value=elem.value* 2.54">
+            <input type="submit" value="Cm vers pouces"
+                onclick="var elem=document.getElementById('nombre'); elem. value=elem.value/ 2.54">
+            <input type="submit" value="Celcius vers Farenheit" 
+                onclick="var elem=document.getElementById('nombre'); elem. value=elem.value* 9 / 5 + 32"> 
+            <input type="submit" value="Farenheit vers Celcius"  
+                onclick="var elem=document.getElementById('nombre'); elem. value=elem.value-32">
+        </p>
+
+        
+        <h2>Affichage dans la page Web</h2>
+        <p>Nom: <input type="text" id="nom"><br>
+           1 à 6: <input type="text" min="1" max="6" id="niveau"><input type="submit" value="Affichez partie 2..." onclick="afficherPartie2();"><br></p>
+        <div id="affichageici">Affichage ici </div>
+        <script>
+            function afficherPartie2() {
+			var element = document.getElementById("niveau").value;
+			var texte = document.getElementById("nom").value;
+			document.getElementById("affichageici").innerHTML = 
+            "Bonjour "+texte+""+" Niveau = "+element+"</"+element+">";
+            }
+        </script>
+        
+
+
+        <div id='partie3'>
+            <h2>Affichage du menu, animation des images et calcul du coût (5 pts)</h2>
+            
+              <div id='menu'> 
+              <ul>
+                 <li class="choisir">Menu</li>
+                 <li>Entrée
+                    <ul>
+                       <li>Escargot</li>
+                       <li>Salade verte</li>
+                       <li>Salade César</li>
+                    </ul>
+                 </li>
+                 <li>Principal
+                    <ul>
+                       <li>Spaghetti</li>
+                       <li>Steak</li>
+                       <li>Pizza</li>
+                    </ul>
+                 </li>
+                 <li>Dessert
+                    <ul>
+                       <li>Crème glacée</li>
+                       <li>Gateau</li>
+                       <li>Pouding</li>
+                    </ul>
+                    <li>Boisson
+                    <ul>
+                       <li>Café / Thé</li>
+                       <li>Boisson gazeuse</li>
+                    </ul>
+                 </li>
+                 </li>
+              </ul>
+              </div>
+              <div id="affichage">
+                  <p class="categorie" id="Entree"><img src="images/vide.jpg" alt="vide"> <span id="prixEntree"></span></p>
+                  <p class="categorie" id="Principal"><img src="images/vide.jpg" alt="vide"> <span id="prixPrincipal"></span></p>
+                  <p class="categorie" id="Dessert"><img src="images/vide.jpg" alt="vide"> <span id="prixDessert"></span></p>
+                  <p class="categorie" id="Boisson"><img src="images/vide.jpg" alt="vide"> <span id="prixBoisson"></span></p>
+              </div>
+          </div>
+          <button>Cliquez ici pour afficher la facture</button>
+
+          <!--  Script pour animer le menu -->
+          <script> 
+                $(document).ready(function(){
+
+                    var monMenu = { "Escargot": {cat: "Entree", image: "escargot.jpg", prix: 5.50},
+                                    "Salade verte" : {cat: "Entree", image: "salade2.jpg", prix: 5.95},
+                                    "Salade César": {cat: "Entree", image: "salade.jpg", prix: 6.95},
+                                    "Spaghetti": {cat: "Principal", image: "spaghetti.jpg", prix: 15.95},
+                                    "Steak": {cat: "Principal", image: "steak.jpg", prix: 25.95},
+                                    "Pizza": {cat: "Principal", image: "pizza.jpg", prix: 17.95},
+                                    "Crème glacée": {cat: "Dessert", image: "cremeglacee.jpg", prix: 4.25},
+                                    "Gateau": {cat: "Dessert", image: "gateau.jpg", prix: 4.95},
+                                    "Pouding": {cat: "Dessert", image: "pouding.jpg", prix: 3.95},
+                                    "Café / Thé": {cat: "Boisson", image: "cafe.jpg", prix: 2.50},
+                                    "Boisson gazeuse": {cat: "Boisson", image: "boisson.jpg", prix: 2.95}};
+
+                    $('li').on('click', function() {
+                        if ($(this).hasClass('choisir'))
+                            return; // on ne fait rien il est déjà sélectionné
+                        var element = $(this).parent();
+                        element.find('li').removeClass('choisir').find('ul').hide();
+                        $(this).addClass('choisir').children('ul').slideToggle(500);
+                    }); 
+                    $('li li').on('click', function() {
+                        // Objet que l'utilisateur a choisi
+                        var choixMenu = monMenu[$(this).html()];
+                        // Nom de la catégorie plus son image
+                        var idImg = "#img"+choixMenu["cat"];
+                        // Pris de l'objet que l'utilisateur a choisi
+                        var idPrix = "#prix"+choixMenu["cat"];
+                        // Nom du fichier de l'imge choissi
+                        var nomFichierImg = "images/"+choixMenu["image"];
+                        // Prix
+                        var prix = choixMenu["prix"];
+                        // Placement du prix dans le span
+                        $(idPrix).html(prix);
+                        // Modification de l'image
+                        $(idImg).attr("src",nomFichierImg);
+                    });
+                    $('button').on('click', function(e) {
+                        var prixEntree = 0;  
+                        var prixPrincipal = 0;
+                        var prixDessert = 0; 
+                        var prixBoisson = 0;
+
+                        // Les valeurs numériques
+                        if (isNaN(prixEntree)) prixEntree = 0;
+                        if (isNaN(prixPrincipal)) prixPrincipal = 0;
+                        if (isNaN(prixDessert)) prixDessert = 0;
+                        if (isNaN(prixDessert)) prixBoisson = 0;
+
+                        // Additions des 4 prix et les taxes
+                        alert("Total: "+"$");
+                    });});
+            </script>
+   </body>
+
+</html>

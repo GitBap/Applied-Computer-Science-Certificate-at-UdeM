@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="bibliothèque">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="membres">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded">
+                            <xs:element name="membre">
+                                <xs:complexType>
+                                    <xs:all maxOccurs="1" minOccurs="1">
+                                        <xs:element name="abonné " type="personne_type"/>
+                                        <xs:element name="référence" type="personne_type"/>
+                                        <xs:element minOccurs="0" name="emprunts">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="1">
+                                                  <xs:element name="livre-emprunt">
+                                                  <xs:complexType>
+                                                  <xs:all>
+                                                  <xs:element name="date_prévue" type="xs:date"/>
+                                                  <xs:element minOccurs="0" name="date_retournée"
+                                                  type="xs:date"/>
+                                                  </xs:all>
+                                                  <xs:attribute name="livre-id" type="xs:string"/>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="1" minOccurs="0" name="retards">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded">
+                                                  <xs:element name="livre-retard">
+                                                  <xs:complexType>
+                                                  <xs:all>
+                                                  <xs:element name="date_prévue" type="xs:string"/>
+                                                  <xs:element name="date_retournée" type="xs:string"/>
+                                                  <xs:element form="qualified" minOccurs="1"
+                                                  name="montant" nillable="false">
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:float">
+                                                  <xs:maxExclusive value="100"/>
+                                                  <xs:minExclusive value="0.0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  </xs:all>
+                                                  <xs:attribute name="livre-id" type="xs:string" use="required"/>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="livres">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded">
+                            <xs:element name="livre">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titre" type="xs:string"/>
+                                        <xs:element maxOccurs="unbounded" minOccurs="1"
+                                            name="auteur">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element maxOccurs="1" name="nom"
+                                                  type="xs:string"/>
+                                                  <xs:element name="prenom" type="xs:string"/>
+                                                  <xs:element maxOccurs="1" minOccurs="0"
+                                                  name="initiales" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="isbn" type="xs:string"/>
+                                        <xs:element name="cdrom" type="present_type"/>
+                                        <xs:element maxOccurs="1" minOccurs="0" name="photo"
+                                            type="xs:string"/>
+                                        <xs:element name="éditeur" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="nb-pages"
+                                            type="xs:positiveInteger"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="numéro" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="adresse_type">
+        <xs:sequence>
+            <xs:element name="numéro" type="xs:string"/>
+            <xs:element name="rue" type="xs:string"/>
+            <xs:element name="ville" type="xs:string"/>
+            <xs:element name="code_postal">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="A9A 9A9"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="province">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="AB"/>
+                        <xs:enumeration value="BC"/>
+                        <xs:enumeration value="MB"/>
+                        <xs:enumeration value="NB"/>
+                        <xs:enumeration value="NL"/>
+                        <xs:enumeration value="NT"/>
+                        <xs:enumeration value="NS"/>
+                        <xs:enumeration value="NS"/>
+                        <xs:enumeration value="NU"/>
+                        <xs:enumeration value="ON"/>
+                        <xs:enumeration value="PE"/>
+                        <xs:enumeration value="QC"/>
+                        <xs:enumeration value="SK"/>
+                        <xs:enumeration value="YT"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="num_tel_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="999-999-9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="personne_type">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prénom" type="xs:string"/>
+            <xs:element name="adresse" type="adresse_type"/>
+            <xs:element name="téléphone" type="téléphone_type"/>
+            <xs:element name="date-naissance" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="present_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="oui"/>
+            <xs:enumeration value="non"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="téléphone_type">
+        <xs:choice>
+            <xs:element name="maison" type="num_tel_type"/>
+            <xs:element name="cellulaire" type="num_tel_type"/>
+            <xs:element name="fax" type="num_tel_type"/>
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>

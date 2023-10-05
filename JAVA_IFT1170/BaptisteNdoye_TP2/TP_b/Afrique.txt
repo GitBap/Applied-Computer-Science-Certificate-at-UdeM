@@ -1,0 +1,51 @@
+1ETHIOPIE                           ADDIS-ABEBA        112712   67673031        
+1NIGERIA                            ABUJA              923768   133881703       
+1ERYTHREE                           ASMARA             121320   4465651         
+1ALGERIE                            ALGER              238174   31763053        
+1GHANA                              ACCRA              238540   19894014        
+1MADAGASCAR                         ANTANARIVO         587040   16979744        
+1BURUNDI                            BUJUMBURA          27830    6223897         
+1CONGO                              BRAZZAVILLE        341821   2894336         
+1GAMBIE                             BANJUL             11300    1411205         
+1GUINEE-BISSAU                      BISSAU             36120    1345479         
+1MALI                               BAMAKO             124100   11008518        
+1REPUBLIQUE CENTRAFR                BANGUI             622984   3742482         
+1BENIN                              COTONOU            112620   7041490         
+1GUINEE                             CONAKRY            245857   7613870         
+1DJIBOUTI                           DJIBOUTI           22000    460700          
+1SENEGAL                            DAKAR              196190   10284929        
+1TANZANIE                           DODOMA             945090   35922454        
+1SIERRA LEONE                       FREETOWN           71740    5426618         
+1BOTSWANA                           GABORONE           581730   1812547         
+1ZIMBABWE                           HARARE             350580   12576742        
+1OUGANDA                            KAMPALA            236040   24699073        
+1SOUDAN                             KHARTOUM           250581   37090298        
+1REPUBLIQUE DEMOCRAT                KINSHASA           234541   55225478        
+1RWANDA                             KIGALI             26338    7312756         
+1EGYPTE                             LE CAIRE           995450   74718797        
+1GABON                              LIBREVILLE         267667   1155749         
+1ANGOLA                             LUANDA             124670   10766471        
+1TOGO                               LOME               56785    5018502         
+1MALAWI                             LILONGWE           118484   10000000        
+1ZAMBIE                             LUSAKA             752614   9582418         
+1GUINEE EQUATORIALE                 MALABO             28051    486060          
+1MOZAMBIQUE                         MAPUTO             801590   19104696        
+1LESOTHO                            MASERU             30355    1861959         
+1SOMALIE                            MOQDISHO           637657   8025190         
+1SWAZILAND                          MBABANE            17363    1104343         
+1LIBERIA                            MONROVIA           111370   3317176         
+1KENYA                              NEIROBI            582650   31138735        
+1TCHAD                              NDJAMENA           128400   9253493         
+1MAURITANIE                         NOUAKCHOTT         102600   2000000         
+1NIGER                              NIAMEY             126700   11058590        
+1BURKINA-FASO                       OUAGADOUGOU        274200   12272289        
+1AFRIQUE DU SUD                     PRETORIA           121991   42718530        
+1CAP VERT                           PRAIA              4033     405163          
+1MAURICE                            PORT LOUIS         1860     1189825         
+1SAO TOME                           SAO TOME           1001     165034          
+1LIBYE                              TRIPOLI            175954   5499074         
+1TUNISIE                            TUNIS              164150   9593402         
+1SEYCHELLES                         VICTORIA           455      80098           
+1NAMIBIE                            WINDHOEK           825418   1820918         
+1COTE D'IVOIRE                      YAMOUSSOUKRO       322460   16962491        
+1CAMEROUN                           YAOUNDE            475440   15746179        

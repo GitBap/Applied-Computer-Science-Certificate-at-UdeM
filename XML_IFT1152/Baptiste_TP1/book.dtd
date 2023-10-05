@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Olivier Baptiste -->
+<!ELEMENT books (book)+ >
+<!ELEMENT book (title, logo?, author-list, copyright, nbpages)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT logo (#PCDATA) >
+<!ELEMENT author-list (firstname, lastname)?>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT nbpages (#PCDATA)>
+<!ELEMENT language (#PCDATA)+>
+<!ELEMENT isbn (#PCDATA)?> 
+]>

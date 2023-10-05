@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Olivier Baptiste -->
+<!DOCTYPE book SYSTEM "book.dtd">
+<books>
+   <book isbn="5-2341-9384-2" language="English">
+      <title>The XMLSPY Game</title>
+      <logo file="cover.gif"/>
+      <author-list>
+         <author>
+            <firstname>David</firstname>
+            <lastname>Smith</lastname>
+         </author>
+         <author>
+            <firstname>Frank</firstname>
+            <lastname>Smith</lastname>
+         </author>
+      </author-list>
+      <copyright>1999</copyright>
+      <nbpages>330</nbpages>
+   </book>
+   <book isbn="0-596-00420-6" language="English">
+      <title>Learning XML</title>
+      <editor>O&apos;Reilly</editor>
+      <logo file="cuit_cuit.gif"/>
+      <author-list>
+         <author>
+            <firstname>Erik</firstname>
+            <lastname>T. Ray</lastname>
+         </author>
+         <author>
+            <firstname>Bob</firstname>
+            <lastname>E. Ray</lastname>
+         </author>
+      </author-list>
+      <copyright>2003</copyright>
+      <nbpages>400</nbpages>
+   </book>
+   <book isbn=" 0-596-00048-0" language="English">
+      <title>JavaScript: The Definitive Guide</title>
+      <editor>O&apos;Reilly</editor>
+      <author-list>
+         <author>
+            <firstname>David</firstname>
+            <lastname>Flanagan</lastname>
+         </author>
+      </author-list>
+      <copyright>2002</copyright>
+      <nbpages>916</nbpages>
+   </book> 
+</books>

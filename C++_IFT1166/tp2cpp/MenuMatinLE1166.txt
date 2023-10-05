@@ -1,0 +1,10 @@
+Titre		Prix
+
+Cafe    	2.00
+The     	1.75
+Cereales 	2.50
+Oeuf 		3.50
+Muffin 		2.00
+Fruits 		3.50
+Pain 		2.50
+

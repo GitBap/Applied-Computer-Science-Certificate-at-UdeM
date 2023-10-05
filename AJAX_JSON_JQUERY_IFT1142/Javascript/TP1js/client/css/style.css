@@ -1,0 +1,22 @@
+.bg-nav-top{
+    background-color: burlywood;
+}
+
+#fenetre{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    display: block;
+    border: 1px solid;
+    width: 500px;
+    height: 300;
+
+}
+
+#fermer{
+    font-size: 20px;
+    color: red;
+    font-style: bold;
+    float:right;
+    cursor: pointer;
+}

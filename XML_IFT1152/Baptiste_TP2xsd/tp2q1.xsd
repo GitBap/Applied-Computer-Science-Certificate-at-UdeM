@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> </xs:schema>
+
+  <xs:element name="weather">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:anyURI" name="link"/>
+                <xs:element name="language">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute type="xs:string" name="encodingLanguage"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="note">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="br"/>
+                            <xs:element type="xs:string" name="b" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="city" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                            <xs:element name="cityName">
+                                <xs:complexType> 
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="temperature">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:byte" name="value"/>
+                                        <xs:element type="xs:string" name="unit"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:byte" name="uvIndex"/>
+                            <xs:element type="xs:byte" name="humidity"/>
+                            <xs:element name="pressure">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:float" name="value"/>
+                                        <xs:element type="xs:string" name="unit"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="conditions">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="img" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element type="xs:dateTime" name="lastUpdated"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>
+

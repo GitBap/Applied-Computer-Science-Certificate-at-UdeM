@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Olivier Baptiste -->
+<!ELEMENT automobiles (Fabricant+)>
+<!ELEMENT Fabricant (modele+)>
+<!ATTLIST Fabricant type CDATA #REQUIRED>
+<!ELEMENT modele (options?, sous-modèle+)>
+<!ATTLIST modele typesmodeles CDATA #REQUIRED>
+<!ELEMENT options (code, prix, description)>
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT optionprix (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT sous-modele (nbrportes, couleur+, prix, autres-option*, groupe-moteur+)>
+<!ATTLIST sous-modele modele CDATA #REQUIRED>
+<!ELEMENT nbr-portes (#PCDATA)>
+<!ELEMENT couleur (#PCDATA)>
+<!ELEMENT prix (#PCDATA)>
+<!ELEMENT autres-options (#PCDATA)>
+<!ELEMENT groupe-moteur (nbcylindres, deplacement, puissance, essence, prix-sup)>
+<!ELEMENT nbrcylindres (#PCDATA)>
+<!ELEMENT deplacement (#PCDATA)>
+<!ELEMENT puissance (#PCDATA)>
+<!ELEMENT essence (#PCDATA)>
+<!ATTLIST essence type (ordinaire | super | diesel) #REQUIRED >
+<!ELEMENT prix-sup (#PCDATA)>
+
